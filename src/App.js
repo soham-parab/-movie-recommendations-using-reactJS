@@ -65,33 +65,33 @@ export default function App() {
       <h3>Pick one of my Recommendations!</h3>
 
       <div>
-        {genres.map((item) => {
+        {genres.map((movie) => {
           return (
             <button
               id="btn"
-              key={item}
-              onClick={() => genreSelected(item)}
+              key={movie}
+              onClick={() => genreSelected(movie)}
               style={{ padding: "0.7rem", margin: "1rem", cursor: "pointer" }}
             >
-              {item}
+              {movie}
             </button>
           );
         })}
       </div>
 
       <ul>
-        {selectedMovie.map((item, index) => {
+        {selectedMovie.map((movie, index) => {
           return (
             <li
               id="list"
               type="none"
-              key={item.name}
+              key={movie.name}
               style={{ margin: "1rem" }}
             >
-              {item.name}
+              {movie.name}
 
               <br></br>
-              <small> Imdb Rating: ({item.Imdb})</small>
+              <small> Imdb Rating: ({movie.Imdb})</small>
             </li>
           );
         })}
